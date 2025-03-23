@@ -24,9 +24,9 @@
   "rank_pattern": {},
   "revision": null,
   "target_modules": [
-    "c_fc",
+    "c_attn",
     "c_proj",
-    "c_attn"
+    "c_fc"
   ],
   "task_type": "CAUSAL_LM",
   "trainable_token_indices": null,
