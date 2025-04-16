@@ -13,7 +13,7 @@ TUYENSINHGPT/
 │   ├── data_diem_chuan_nam_2024.csv     # Điểm chuẩn đại học năm 2024
 │   ├── data1.csv                        # Phần đầu của kết quả embedding 
 │   ├── data2.csv                        # Phần sau của kết quả embedding
-│   ├── train_data.json                  # Từ điển cặp câu hỏi-câu trả lời (hơn 200.000 mục)
+│   ├── train_data.json                  # Từ điển cặp câu hỏi-câu trả lời
 │   └── vector_db.faiss                  # Cơ sở dữ liệu vector FAISS cho tìm kiếm ngữ nghĩa
 ├── .gitignore
 ├── README.md                            # README.md
@@ -80,7 +80,7 @@ python save_vector_db.py
 Script `crawl.py` trong thư mục `crawl` được sử dụng để thu thập dữ liệu tuyển sinh đại học từ các nguồn liên quan.
 
 ### Quy trình Embedding
-Quá trình embedding được chia thành hai phần do kích thước tập dữ liệu lớn (hơn 200.000 mục), tạo ra `data1.csv` và `data2.csv` sau đó được kết hợp để tạo chỉ mục FAISS.
+Quá trình embedding được chia thành hai phần do kích thước tập dữ liệu lớn, tạo ra `data1.csv` và `data2.csv` sau đó được kết hợp để tạo chỉ mục FAISS.
 
 ## Ghi chú
 - Hệ thống được thiết kế đặc biệt cho các truy vấn tiếng Việt về tuyển sinh đại học
