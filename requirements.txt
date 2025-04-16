@@ -1,0 +1,5 @@
+numpy
+pandas
+faiss-gpu
+sentence-transformers
+groq
