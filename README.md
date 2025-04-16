@@ -6,20 +6,20 @@ Dự án này xây dựng một hệ thống hỏi đáp thông tin tuyển sinh
 ```
 TUYENSINHGPT/
 ├── crawl/
-│   ├── crawl.py             # Chương trình cào dữ liệu tuyển sinh đại học
-│   └── nganh_dao_tao.csv    # Dữ liệu về các ngành đào tạo
+│   ├── crawl.py                         # Chương trình cào dữ liệu tuyển sinh đại học
+│   └── nganh_dao_tao.csv                # Dữ liệu về các ngành đào tạo
 ├── data/
-│   ├── data_diem_chuan_cleaned.csv  # Dữ liệu điểm chuẩn đã được làm sạch
-│   ├── data_diem_chuan_nam_2024.csv # Điểm chuẩn đại học năm 2024
-│   ├── data1.csv            # Phần đầu của kết quả embedding 
-│   ├── data2.csv            # Phần sau của kết quả embedding
-│   ├── train_data.json      # Từ điển cặp câu hỏi-câu trả lời (hơn 200.000 mục)
-│   └── vector_db.faiss      # Cơ sở dữ liệu vector FAISS cho tìm kiếm ngữ nghĩa
+│   ├── data_diem_chuan_cleaned.csv      # Dữ liệu điểm chuẩn đã được làm sạch
+│   ├── data_diem_chuan_nam_2024.csv     # Điểm chuẩn đại học năm 2024
+│   ├── data1.csv                        # Phần đầu của kết quả embedding 
+│   ├── data2.csv                        # Phần sau của kết quả embedding
+│   ├── train_data.json                  # Từ điển cặp câu hỏi-câu trả lời (hơn 200.000 mục)
+│   └── vector_db.faiss                  # Cơ sở dữ liệu vector FAISS cho tìm kiếm ngữ nghĩa
 ├── .gitignore
-├── README.md                # README.md
-├── requirements.txt         # Các thư viện cần thiết
-├── run.py                   # Script chính để chạy chức năng hỏi đáp
-└── save_vector_db.py        # Script để tạo và lưu cơ sở dữ liệu vector FAISS
+├── README.md                            # README.md
+├── requirements.txt                     # Các thư viện cần thiết
+├── run.py                               # Script chính để chạy chức năng hỏi đáp
+└── save_vector_db.py                    # Script để tạo và lưu cơ sở dữ liệu vector FAISS
 ```
 
 ## Tổng quan
