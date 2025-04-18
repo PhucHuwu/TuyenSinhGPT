@@ -15,11 +15,11 @@ TUYENSINHGPT/
 │   ├── data2.csv                        # Phần sau của kết quả embedding
 │   ├── train_data.json                  # Từ điển cặp câu hỏi-câu trả lời
 │   └── vector_db.faiss                  # Cơ sở dữ liệu vector FAISS cho tìm kiếm ngữ nghĩa
-├── .gitignore
 ├── README.md                            # README.md
+├── build_vector_database.py             # Script để tạo cơ sở dữ liệu vector
 ├── requirements.txt                     # Các thư viện cần thiết
 ├── run.py                               # Script chính để chạy chức năng hỏi đáp
-└── save_vector_db.py                    # Script để tạo và lưu cơ sở dữ liệu vector FAISS
+└── save_vector_database.py              # Script để lưu cơ sở dữ liệu vector FAISS
 ```
 
 ## Tổng quan
