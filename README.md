@@ -72,8 +72,12 @@ Chương trình sẽ xử lý câu hỏi mẫu: "Tôi thích lập trình thì n
 
 ### Tạo hoặc Cập nhật Cơ sở dữ liệu Vector
 Nếu bạn có dữ liệu mới cần thêm:
+Chỉnh sửa hoặc thêm dữ liệu trong file `train_data.json` sau đó embedding bằng `build_vector_database.py` và lưu vector database bằng `save_vector_database.py`
 ```
-python save_vector_db.py
+python build_vector_database.py
+```
+```
+python save_vector_database.py
 ```
 
 ## Phát triển
