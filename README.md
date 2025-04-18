@@ -8,6 +8,7 @@ TUYENSINHGPT/
 ├── crawl/
 │   ├── crawl.py                         # Chương trình cào dữ liệu tuyển sinh đại học
 │   └── nganh_dao_tao.csv                # Dữ liệu về các ngành đào tạo
+│
 ├── data/
 │   ├── data_diem_chuan_cleaned.csv      # Dữ liệu điểm chuẩn đã được làm sạch
 │   ├── data_diem_chuan_nam_2024.csv     # Điểm chuẩn đại học năm 2024
@@ -15,6 +16,7 @@ TUYENSINHGPT/
 │   ├── data2.csv                        # Phần sau của kết quả embedding
 │   ├── train_data.json                  # Từ điển cặp câu hỏi-câu trả lời
 │   └── vector_db.faiss                  # Cơ sở dữ liệu vector FAISS cho tìm kiếm ngữ nghĩa
+│
 ├── README.md                            # README.md
 ├── build_vector_database.py             # Script để tạo cơ sở dữ liệu vector
 ├── requirements.txt                     # Các thư viện cần thiết
