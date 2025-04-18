@@ -77,4 +77,4 @@ python save_vector_database.py
 
 ## Ghi chú
 - Hệ thống được thiết kế đặc biệt cho các truy vấn tiếng Việt về tuyển sinh đại học
-- Tất cả các phản hồi được tạo ra bằng tiếng Việt như được quy định trong prompt hệ thống
+- Tất cả các phản hồi được tạo ra bằng tiếng Việt được quy định trong prompt hệ thống
