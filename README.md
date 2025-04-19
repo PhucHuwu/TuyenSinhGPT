@@ -77,4 +77,5 @@ python save_vector_database.py
 
 ## Ghi chú
 - Hệ thống được thiết kế đặc biệt cho các truy vấn tiếng Việt về tuyển sinh đại học
+- Hiện tại, dữ liệu chỉ bao gồm điểm chuẩn của các trường đại học năm 2024. Thông tin về điểm chuẩn các năm trước sẽ được cập nhật và bổ sung vào mô hình trong các phiên bản tiếp theo.
 - Tất cả các phản hồi được tạo ra bằng tiếng Việt được quy định trong prompt hệ thống
