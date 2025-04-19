@@ -1,4 +1,12 @@
-﻿# TuyenSinhGPT
+# TuyenSinhGPT
+<p align="center">
+  <a href="#tiếng-việt">🇻🇳 Tiếng Việt</a> •
+  <a href="#english">🇺🇸 English</a>
+</p>
+
+---
+
+<h2 id="tiếng-việt"></h2>
 
 Dự án này xây dựng một hệ thống hỏi đáp thông tin tuyển sinh đại học tại Việt Nam. Hệ thống sử dụng tìm kiếm ngữ nghĩa dựa trên embedding và mô hình ngôn ngữ lớn để tạo ra câu trả lời bằng tiếng Việt.
 
@@ -26,7 +34,6 @@ TUYENSINHGPT/
 
 ## Tổng quan
 Hệ thống cung cấp câu trả lời cho các câu hỏi về tuyển sinh đại học, các ngành học và yêu cầu đầu vào. Hệ thống sử dụng:
-
 1. **Tìm kiếm ngữ nghĩa**: Sử dụng embeddings từ mô hình BAAI/bge-small-en-v1.5 để tìm thông tin liên quan
 2. **Cơ sở dữ liệu vector FAISS**: Để tìm kiếm hiệu quả các vector văn bản tương đồng
 3. **Tích hợp LLM**: Sử dụng API của Groq với Llama 3 70B để tạo câu trả lời phù hợp bằng tiếng Việt
@@ -79,3 +86,86 @@ python save_vector_database.py
 - Hệ thống được thiết kế đặc biệt cho các truy vấn tiếng Việt về tuyển sinh đại học
 - Hiện tại, dữ liệu chỉ bao gồm điểm chuẩn của các trường đại học năm 2024. Thông tin về điểm chuẩn các năm trước sẽ được cập nhật và bổ sung vào mô hình trong các phiên bản tiếp theo.
 - Tất cả các phản hồi được tạo ra bằng tiếng Việt được quy định trong prompt hệ thống
+
+---
+
+<h2 id="english"></h2>
+
+This project builds a question-answering system for university admissions information in Vietnam. The system uses semantic search based on embeddings and a large language model to generate answers in Vietnamese.
+
+## Project Structure
+```
+TUYENSINHGPT/
+├── crawl/
+│   ├── crawl.py                         # Program to crawl university admissions data
+│   └── nganh_dao_tao.csv                # Data about training majors
+│
+├── data/
+│   ├── data_diem_chuan_cleaned.csv      # Cleaned benchmark score data
+│   ├── data_diem_chuan_nam_2024.csv     # University benchmark scores for 2024
+│   ├── data1.csv                        # First part of embedding results
+│   ├── data2.csv                        # Second part of embedding results
+│   ├── dataset.json                     # Dictionary of question-answer pairs
+│   └── vector_db.faiss                  # FAISS vector database for semantic search
+│
+├── README.md                            # README.md
+├── build_vector_database.py             # Script to create vector database
+├── requirements.txt                     # Required libraries
+├── run.py                               # Main script to run the QA function
+└── save_vector_database.py              # Script to save FAISS vector database
+```
+
+## Overview
+The system provides answers to questions about university admissions, study majors, and entry requirements. The system uses:
+1. **Semantic Search**: Using embeddings from the BAAI/bge-small-en-v1.5 model to find relevant information
+2. **FAISS Vector Database**: For efficient searching of similar text vectors
+3. **LLM Integration**: Using Groq's API with Llama 3 70B to generate appropriate answers in Vietnamese
+
+## How It Works
+1. The system receives questions from users about university admissions in Vietnamese
+2. Converts the question into vector embeddings using SentenceTransformer
+3. Searches the FAISS vector database for semantically similar content
+4. Extracts the most relevant contexts from the knowledge base
+5. Uses Llama 3 through Groq to generate comprehensive answers in Vietnamese based on the extracted context
+
+## Data Sources
+The system is built on Vietnamese university admissions data:
+- University benchmark scores for 2024
+- Information about training majors
+- Cleaned and processed admissions data
+
+## Setup and Usage
+### Requirements
+- Python 3.8 or higher
+- Required Python libraries (see requirements.txt)
+- Groq API key
+
+### Installation
+1. Clone this repository
+2. Install the necessary libraries:
+   ```
+   pip install -r requirements.txt
+   ```
+3. Set up the Groq API key in the run.py file or as an environment variable
+
+### Running the System
+To run the QA system:
+```
+python run.py
+```
+The program will process the sample question: "What major and which university should I choose if I like programming?"
+
+### Creating or Updating the Vector Database
+If you have new data to add:
+Edit or add data in the `dataset.json` file, then embed using `build_vector_database.py` and save the vector database using `save_vector_database.py`
+```
+python build_vector_database.py
+```
+```
+python save_vector_database.py
+```
+
+## Notes
+- The system is specifically designed for Vietnamese queries about university admissions
+- Currently, the data only includes benchmark scores for universities in 2024. Information about benchmark scores from previous years will be updated and added to the model in future versions
+- All responses are generated in Vietnamese as specified in the system prompt
