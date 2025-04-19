@@ -14,7 +14,7 @@ TUYENSINHGPT/
 │   ├── data_diem_chuan_nam_2024.csv     # Điểm chuẩn đại học năm 2024
 │   ├── data1.csv                        # Phần đầu của kết quả embedding 
 │   ├── data2.csv                        # Phần sau của kết quả embedding
-│   ├── train_data.json                  # Từ điển cặp câu hỏi-câu trả lời
+│   ├── dataset.json                     # Từ điển cặp câu hỏi-câu trả lời
 │   └── vector_db.faiss                  # Cơ sở dữ liệu vector FAISS cho tìm kiếm ngữ nghĩa
 │
 ├── README.md                            # README.md
