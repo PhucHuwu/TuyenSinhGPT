@@ -29,7 +29,7 @@ def get_answer_from_context(question: str, context_chunks: list[str]) -> str:
 
 embedding_model = SentenceTransformer("BAAI/bge-small-en-v1.5")
 
-with open("./data/train_data.json", "r", encoding="utf-8") as file:
+with open("./data/dataset.json", "r", encoding="utf-8") as file:
     context_data = json.load(file)
 
 context_keys = list(context_data.keys())

@@ -3,7 +3,7 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer
 import json
 
-with open("train_data.json", 'r', encoding='utf-8') as f:
+with open("./data/dataset.json", 'r', encoding='utf-8') as f:
     raw_data = json.load(f)
 
 questions = list(raw_data.keys())

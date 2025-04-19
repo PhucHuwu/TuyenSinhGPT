@@ -14,4 +14,4 @@ embeddings = np.array(embeddings).astype('float32')
 
 index = faiss.IndexFlatL2(384)
 index.add(embeddings)
-faiss.write_index(index, "vector_db.faiss")
+faiss.write_index(index, "./data/vector_db.faiss")
