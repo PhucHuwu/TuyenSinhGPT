@@ -1,4 +1,4 @@
-﻿# TuyenSinhGPT
+# TuyenSinhGPT
 
 Dự án này xây dựng một hệ thống hỏi đáp thông tin tuyển sinh đại học tại Việt Nam. Hệ thống sử dụng tìm kiếm ngữ nghĩa dựa trên embedding và mô hình ngôn ngữ lớn để tạo ra câu trả lời bằng tiếng Việt.
 
