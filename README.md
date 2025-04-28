@@ -18,9 +18,10 @@ TUYENSINHGPT/
 │   ├── train_data.json                  # Từ điển cặp câu hỏi-câu trả lời
 │   └── vector_db.faiss                  # Cơ sở dữ liệu vector FAISS cho tìm kiếm ngữ nghĩa
 │
-├── README.md                            # README.md
+├── .gitattributes
+├── README.md
 ├── build_vector_database.py             # Script để tạo cơ sở dữ liệu vector
-├── requirements.txt                     # Các thư viện cần thiết
+├── requirements.txt
 ├── run.py                               # Script chính để chạy chức năng hỏi đáp
 └── save_vector_database.py              # Script để lưu cơ sở dữ liệu vector FAISS
 ```
@@ -60,11 +61,19 @@ Hệ thống được xây dựng trên dữ liệu tuyển sinh đại học Vi
 ### Cài đặt
 
 1. Clone repository này
-2. Cài đặt các thư viện cần thiết:
    ```
+   git clone https://github.com/PhucHuwu/TuyenSinhGPT.git
+   ```
+3. Cài đặt các thư viện cần thiết:
+   ```
+   cd TuyenSinhGPT
    pip install -r requirements.txt
    ```
-3. Thiết lập API key của Groq trong file run.py hoặc như một biến môi trường
+4. Sử dụng lfs để pull dữ liệu:
+   ```
+   git lfs pull
+   ```
+5. Thiết lập API key của Groq trong file run.py hoặc như một biến môi trường
 
 ### Chạy hệ thống
 
