@@ -1,10 +1,10 @@
 # TuyenSinhGPT
 
-Dự án này xây dựng một hệ thống hỏi đáp thông tin tuyển sinh đại học tại Việt Nam. Hệ thống sử dụng tìm kiếm ngữ nghĩa dựa trên embedding và mô hình ngôn ngữ lớn để tạo ra câu trả lời bằng tiếng Việt.
+Chào mừng bạn đến với TuyenSinhGPT! Dự án này xây dựng một hệ thống hỏi đáp thông minh về thông tin tuyển sinh đại học tại Việt Nam. Hệ thống sử dụng tìm kiếm ngữ nghĩa dựa trên embedding và mô hình ngôn ngữ lớn (LLM) để tạo ra câu trả lời chính xác, đầy đủ bằng tiếng Việt.
 
 ## Cấu trúc Dự án
 
-```
+```plaintext
 TUYENSINHGPT/
 ├── crawl/
 │   ├── crawl.py                         # Chương trình cào dữ liệu tuyển sinh đại học
@@ -55,31 +55,31 @@ Hệ thống được xây dựng trên dữ liệu tuyển sinh đại học Vi
 ### Yêu cầu
 
 - Python 3.8 trở lên
-- Các thư viện Python cần thiết (xem requirements.txt)
+- Các thư viện Python cần thiết (xem [`requirements.txt`](requirements.txt))
 - API key của Groq
 
 ### Cài đặt
 
 1. Clone repository này
-   ```
+   ```bash
    git clone https://github.com/PhucHuwu/TuyenSinhGPT.git
    ```
-3. Cài đặt các thư viện cần thiết:
-   ```
+2. Cài đặt các thư viện cần thiết:
+   ```bash
    cd TuyenSinhGPT
    pip install -r requirements.txt
    ```
-4. Sử dụng lfs để pull dữ liệu:
-   ```
+3. Sử dụng lfs để pull dữ liệu:
+   ```bash
    git lfs pull
    ```
-5. Thiết lập API key của Groq trong file run.py hoặc như một biến môi trường
+4. Thiết lập API key của Groq trong file [run.py](run.py) hoặc như một biến môi trường
 
 ### Chạy hệ thống
 
 Để chạy hệ thống hỏi đáp:
 
-```
+```bash
 python run.py
 ```
 
@@ -88,13 +88,16 @@ Chương trình sẽ xử lý câu hỏi mẫu: "Tôi thích lập trình thì n
 ### Tạo hoặc Cập nhật Cơ sở dữ liệu Vector
 
 Nếu bạn có dữ liệu mới cần thêm:
-Chỉnh sửa hoặc thêm dữ liệu trong file `train_data.json` sau đó embedding bằng `build_vector_database.py` và lưu vector database bằng `save_vector_database.py`
 
-```
+1. Chỉnh sửa hoặc thêm dữ liệu trong file [`data/train_data.json`](data/train_data.json)
+2. Tạo embedding bằng [`build_vector_database.py`](build_vector_database.py)
+3. Lưu vector database bằng [`save_vector_database.py`](save_vector_database.py)
+
+```bash
 python build_vector_database.py
 ```
 
-```
+```bash
 python save_vector_database.py
 ```
 
